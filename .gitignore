@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 # Mirror Examples
 /Assets/Mirror/Examples
+
+.DS_Store

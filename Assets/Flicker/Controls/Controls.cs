@@ -21,6 +21,10 @@ public class Controls : NetworkBehaviour
     {
         jumpValue = jumpControlValue.Get<float>();
     }
+    void OnNormalAttack(InputValue normalAttackControlValue)
+    {
+        
+    }
 
     void Update()
     {
