@@ -7,6 +7,7 @@ public class FlickerPlayer : NetworkBehaviour
 {
     [SerializeField] GameObject playerObject;
     public Rigidbody2D playerBody;
+    public bool gliding;
     Color playerColour;
     public Color PlayerColour {
         get { return playerColour; }
