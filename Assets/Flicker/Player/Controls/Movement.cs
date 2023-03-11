@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Controls : NetworkBehaviour
+public class Movement : NetworkBehaviour
 {
     float movementX;
     float jumpValue;
@@ -20,10 +20,6 @@ public class Controls : NetworkBehaviour
     void OnJump(InputValue jumpControlValue)
     {
         jumpValue = jumpControlValue.Get<float>();
-    }
-    void OnNormalAttack(InputValue normalAttackControlValue)
-    {
-        
     }
 
     void Update()

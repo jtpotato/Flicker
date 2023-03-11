@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1223037707962751811}
   - component: {fileID: 1223037707962751809}
   - component: {fileID: 1223037707962751810}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1223037708271295018}
   - component: {fileID: 1223037708271295017}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 6eb9b8f5e1a9f4a749c545f928eb60dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -262,12 +262,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6191482292046623241}
+  - component: {fileID: 6976841663074368815}
   - component: {fileID: 6191482292046623246}
   - component: {fileID: 6160923287761905890}
   - component: {fileID: 3872221324609058734}
   - component: {fileID: 6244663027756365261}
   - component: {fileID: 6191482292046623240}
   - component: {fileID: 8086654365325168207}
+  - component: {fileID: 3998573416520208930}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -292,6 +294,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6976841663074368815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191482292046623242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9dbd4e26a774963b905060c0f94c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
+  playerObject: {fileID: 1223037708271295019}
 --- !u!114 &6191482292046623246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,3 +442,20 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   cameraObject: {fileID: 683503074588514482}
+--- !u!114 &3998573416520208930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191482292046623242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6694565aed6b34123a39e2cb8fdc687d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
+  enemyColour: {r: 1, g: 0, b: 0, a: 1}
+  friendlyColour: {r: 0, g: 0.6636367, b: 1, a: 1}
