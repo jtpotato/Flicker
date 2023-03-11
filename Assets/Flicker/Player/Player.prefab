@@ -310,6 +310,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   playerObject: {fileID: 1223037708271295019}
+  playerBody: {fileID: 1223037707962751810}
 --- !u!114 &6191482292046623246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +425,6 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0.1
-  rb: {fileID: 1223037707962751810}
   speed: 7
 --- !u!114 &8086654365325168207
 MonoBehaviour:

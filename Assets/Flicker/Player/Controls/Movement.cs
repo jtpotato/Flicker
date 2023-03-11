@@ -9,8 +9,13 @@ public class Movement : NetworkBehaviour
 {
     float movementX;
     float jumpValue;
-    [SerializeField] Rigidbody2D rb;
+    Rigidbody2D rb;
     [SerializeField] float speed;
+
+    void Start()
+    {
+        rb = GetComponent<FlickerPlayer>().playerBody;
+    }
 
     void OnMove(InputValue movementValue)
     {
