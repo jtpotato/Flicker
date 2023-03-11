@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollow : NetworkBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] Camera playerCamera;
@@ -11,6 +12,7 @@ public class CameraFollow : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isLocalPlayer) return;
         Vector3 desiredPos = target.position - new Vector3(0f, 0f, (target.position.y + 10f) * 2f);
         Vector3 smoothedCamPos = Vector3.SmoothDamp(playerCamera.transform.position, desiredPos, ref velocity, smoothTime);
         playerCamera.transform.position = smoothedCamPos;
