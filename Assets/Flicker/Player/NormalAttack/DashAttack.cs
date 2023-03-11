@@ -36,6 +36,7 @@ public class DashAttack : MonoBehaviour
         if (!target) return;
         
         GetComponentInParent<FlickerPlayer>().gliding = true;
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
         Vector2 dashDirection = new Vector2(target.transform.position.x, target.transform.position.y) - rb.position;
         rb.AddForce(dashDirection.normalized * 1000f);
     }

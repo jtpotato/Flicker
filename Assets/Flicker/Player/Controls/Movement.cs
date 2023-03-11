@@ -38,6 +38,7 @@ public class Movement : NetworkBehaviour
                 if (Mathf.Abs(rb.velocity.x) < Mathf.Abs(Mathf.Ceil(movementX) * speed))
                 {
                     rb.velocity = new Vector2(Mathf.Ceil(movementX) * speed, rb.velocity.y);
+                    GetComponent<FlickerPlayer>().gliding = false;
                 }
                 else if (rb.velocity.x > 0 && Mathf.Ceil(movementX) * speed + rb.velocity.x < rb.velocity.x)
                 {
