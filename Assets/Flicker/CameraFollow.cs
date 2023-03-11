@@ -5,13 +5,20 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] Transform target;
-    float smoothTime = 0.2f;
+    float smoothTime = 0.5f;
     Vector3 velocity = Vector3.zero;
+    [SerializeField] float offsetX;
+    [SerializeField] float offsetY;
+    [SerializeField] float offsetZ;
 
-    void FixedUpdate()
+    void Update()
     {
-        Vector3 desiredPos = target.position - new Vector3(0f, 0f, (target.position.y + 10f) * 2f);
+        // Get desired direction from camera to target
+        Vector3 desiredDir = target.rotation * new Vector3(offsetX, offsetY, offsetZ);
+        Vector3 desiredPos = target.position + desiredDir;
         Vector3 smoothedCamPos = Vector3.SmoothDamp(transform.position, desiredPos, ref velocity, smoothTime);
         transform.position = smoothedCamPos;
+        
+        transform.LookAt(target);
     }
 }
