@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "LockTarget",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "69021ad7-82b1-4d7e-8d3d-3511759550b1",
                     "expectedControlType": "Button",
@@ -169,11 +169,11 @@
                 {
                     "name": "",
                     "id": "77de0832-7651-4bf9-880a-83adbfd0f251",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LockTarget",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
